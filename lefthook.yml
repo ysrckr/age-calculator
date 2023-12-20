@@ -14,7 +14,7 @@ pre-commit:
   commands:
     eslint:
       glob: "*.{js,ts,jsx,tsx}"
-      run: pnpm eslint {staged_files}
+      run: pnpm lint {staged_files}
     stylelint:
       glob: "*.{css,scss}"
       run: pnpm stylelint {staged_files}
