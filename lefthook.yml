@@ -13,13 +13,13 @@ pre-commit:
   parallel: true
   commands:
     eslint:
-      glob: "*.{js,ts,jsx,tsx}"
-      run: pnpm lint {staged_files}
+      glob: '*.{js,ts,jsx,tsx}'
+      run: pnpm eslint {staged_files} --fix --quiet
     stylelint:
-      glob: "*.{css,scss}"
-      run: pnpm stylelint {staged_files}
+      glob: '*.{css,scss}'
+      run: pnpm stylelint {staged_files} --fix --quiet
     prettier:
-      glob: "*.{js,ts,jsx,tsx,css,scss,json,md}"
-      run: pnpm prettier {staged_files}
+      glob: '*.{js,ts,jsx,tsx,css,scss,md,json,yml}'
+      run: pnpm prettier {staged_files} --write --ignore-unknown --loglevel warn
     
 
