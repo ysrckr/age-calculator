@@ -9,10 +9,10 @@ pre-commit:
   commands:
     eslint:
       glob: '*.{js,ts,jsx,tsx}'
-      run: pnpm eslint {staged_files} --fix --quiet
+      run: pnpm eslint {staged_files} --quiet
     stylelint:
       glob: '*.{css,scss}'
-      run: pnpm stylelint {staged_files} --fix --quiet
+      run: pnpm stylelint {staged_files} --quiet
     prettier:
       glob: '*.{js,ts,jsx,tsx,css,scss,md,json,yml}'
-      run: pnpm prettier {staged_files} --write --ignore-unknown --loglevel warn
+      run: pnpm prettier {staged_files}  --ignore-unknown --loglevel warn
