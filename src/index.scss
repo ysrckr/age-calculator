@@ -1,6 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+$purple: hsl(259, 100%, 65%);
+$red: hsl(0, 100%, 67%);
+
+$white: hsl(0, 0%, 100%);
+$white-off: hsl(0, 0%, 94%);
+$grey-light: hsl(0, 0%, 86%);
+$grey-smokey: hsl(0, 1%, 44%);
+$black-off: hsl(0, 0%, 8%);
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  background-color: $grey-light;
+}
+
+.calculator {
+  margin: 4rem auto 0;
+  background-color: $white;
+  height: 480px;
+  width: 360px;
+
+  border-radius: 2rem 2rem 5rem 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+}
+
+.label {
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  color: $grey-smokey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 60%;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $grey-light;
 }
